@@ -1,0 +1,8 @@
+{
+	"test": {
+		"page-title": "Test Page",
+		"content-title": "Test Page",
+		"content": "test.php",
+		"icon": "internet-explorer"
+	}
+}
