@@ -1,5 +1,9 @@
-<?php 
-	$page = get_object_vars(json_decode(file_get_contents("pages/pages.json")))[$_GET['page']];
+<?php
+	$page_param = $_GET['page'];
+	if (empty($page_param)) {
+		$page_param = "home";
+	}
+	$page = get_object_vars(json_decode(file_get_contents("pages/pages.json")))[$page_param];
 ?>
 <!DOCTYPE html>
 <html>
@@ -232,25 +236,8 @@
 
         <!-- Main content -->
         <section class="content">
-
-          <!-- Default box -->
-          <div class="box">
-            <div class="box-header with-border">
-              <h3 class="box-title"><?php echo $_GET['page']; ?></h3>
-              <div class="box-tools pull-right">
-                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
-                <button class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <div class="box-body">
-              <?php include("pages/".get_object_vars($page)['content']);
+<?php include("pages/".get_object_vars($page)['content']);
 				?>
-            </div><!-- /.box-body -->
-            <div class="box-footer">
-              Footer
-            </div><!-- /.box-footer-->
-          </div><!-- /.box -->
-
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->
 
