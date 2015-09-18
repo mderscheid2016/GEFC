@@ -3,7 +3,12 @@
 	if (empty($page_param)) {
 		$page_param = "home";
 	}
-	$page = get_object_vars(json_decode(file_get_contents("pages/pages.json")))[$page_param];
+	$pages = get_object_vars(json_decode(file_get_contents('pages/pages.json')));
+	if (!array_key_exists($page_param, $pages)) {
+		$page_param = "not-found";
+	}
+	$page = $pages[$page_param];
+	
 ?>
 <!DOCTYPE html>
 <html>
@@ -212,7 +217,6 @@
           <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
             <?php 
-            	$pages = get_object_vars(json_decode(file_get_contents('pages/pages.json')));
             	foreach ($pages as $key => $value) {
             		$title = get_object_vars($value)['page-title'];
             		echo "<li><a href='$key'><i class='fa fa-{$value->icon}'></i><span>$title</span></a></i>";
@@ -236,7 +240,7 @@
 
         <!-- Main content -->
         <section class="content">
-<?php include("pages/".get_object_vars($page)['content']);
+			<?php include("pages/".get_object_vars($page)['content']);
 				?>
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->
