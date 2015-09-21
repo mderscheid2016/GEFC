@@ -3,7 +3,7 @@
 	if (empty($page_param)) {
 		$page_param = "home";
 	}
-	$pages = get_object_vars(json_decode(file_get_contents('pages/pages.json')));
+	$pages = get_object_vars(json_decode(file_get_contents('data/pages.json')));
 	if (!array_key_exists($page_param, $pages)) {
 		$page_param = "not-found";
 	}
