@@ -4,5 +4,5 @@
 	$config->port=3306;
 	$config->username="root";
 	$config->database="awana";
-	$config->password="";
+	$config->password="Tardis4815";
 ?>
