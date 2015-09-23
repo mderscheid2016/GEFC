@@ -7,7 +7,6 @@
 		$result->error = "Connection Error.";
 	}else {
 		$function = $_GET['function'];
-		
 	}
 	echo json_encode($result);
 ?>
