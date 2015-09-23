@@ -240,7 +240,7 @@
 
         <!-- Main content -->
         <section class="content">
-			<?php include("data/".get_object_vars($page)['content']);
+			<?php include("data/pages/".get_object_vars($page)['content']);
 				?>
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->
