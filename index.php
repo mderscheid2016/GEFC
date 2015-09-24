@@ -1,4 +1,8 @@
 <?php
+	session_start();
+	if(empty($_SESSION['user'])) {
+		header("Location: /login?return=".urlencode($_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']));
+	}
 	$page_param = $_GET['page'];
 	if (empty($page_param)) {
 		$page_param = "home";
