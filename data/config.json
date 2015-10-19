@@ -6,9 +6,8 @@
 		"password": "root",
 		"database": "awana"
 	},
-	"rootLogin": {
-		"username": "root",
-		"password": "root"
-	} 
+	"tables": {
+		"users": "users"
+	}
 	
 }

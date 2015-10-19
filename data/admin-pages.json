@@ -1,0 +1,8 @@
+{
+	"config": {
+		"page-title": "System Config",
+		"content-title": "System Configuration",
+		"content": "test.php",
+		"icon": "wrench"
+	}
+}

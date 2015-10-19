@@ -1,8 +1,15 @@
 {
-	"test": {
-		"page-title": "Test Page",
-		"content-title": "Test Page",
+	"home": {
+		"page-title": "Home",
+		"content-title": "Home",
 		"content": "test.php",
-		"icon": "internet-explorer"
+		"icon": "home"
+	},
+	"Government": {
+		"page-title": "Government",
+		"content-title": "Government Notes",
+		"content": "government.php",
+		"icon": "book"
 	}
+
 }
